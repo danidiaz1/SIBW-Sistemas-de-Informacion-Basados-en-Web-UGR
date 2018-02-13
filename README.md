@@ -42,23 +42,35 @@ A continuación se adjuntan algunas imágenes de muestra:
 
 ### Portada
 
-![Alt text](html_muestra/imgs_muestra/portada1.png?raw=true "Portada")
-![Alt text](html_muestra/imgs_muestra/portada2.png?raw=true)
+![Alt text](html_muestra/imgs_muestra/portada2.png?raw=true "Portada")
+![Alt text](html_muestra/imgs_muestra/portada1.png?raw=true)
+
+
+
 
 ### Noticia
 
 ![Alt text](html_muestra/imgs_muestra/noticia1.png?raw=true "Noticia")
 ![Alt text](html_muestra/imgs_muestra/noticia2.png?raw=true)
 
+
+
+
 ### Noticia, versión para imprimir
 
 ![Alt text](html_muestra/imgs_muestra/noticia_imprimir.png?raw=true "Noticia, versión para imprimir")
+
+
+
 
 ### Gestor de noticias
 
 ![Alt text](html_muestra/imgs_muestra/gestor_noticias1.png?raw=true "Gestor de noticias")
 ![Alt text](html_muestra/imgs_muestra/gestor_noticias2.png?raw=true)
 
-#### Gestor de noticias, nueva noticia
+
+
+
+### Gestor de noticias, nueva noticia
 
 ![Alt text](html_muestra/imgs_muestra/nueva_noticia.png?raw=true "Nueva noticia")
