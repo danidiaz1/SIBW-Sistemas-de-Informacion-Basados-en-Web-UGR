@@ -36,7 +36,9 @@ El contenido (noticias, comentarios, portada) se carga dinámicamente desde una 
 
 ## Muestras de la web
 
-Se puede ver una muestra de algunos HTML generados por el sistema (sin funcionalidad) en la carpeta "html_muestra". A continuación se adjunta algunas imágenes de muestra:
+Se puede ver una muestra de algunos HTML generados por el sistema (sin funcionalidad) en la carpeta "html_muestra". 
+
+A continuación se adjuntan algunas imágenes de muestra:
 
 
 
