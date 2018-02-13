@@ -1,0 +1,237 @@
+/* Reglas generales */
+
+/* regla para ver la estructura de cajas */
+/*div {
+	border: 1px solid black;
+}*/
+
+hr {
+	margin-bottom: 3px;
+	margin-top: 3px;
+	clear: both;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	color: #990000;
+}
+
+a:active {
+	color: #ff8300;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: black;
+	background: white;
+	text-align: justify;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 18px;
+	color: #555;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+textarea {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+/* Reglas para las cajas */
+
+div.contenido { /* Caja que engloba a todas */
+	width: 960px;
+	margin: auto;
+	margin-top: 5px;
+}
+
+div.cabecera {
+	border-top: 1px solid gray;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	clear:both;
+	border-bottom: 1px solid #990000; 
+}
+
+div.footer {
+	border-top: 1px solid gray;
+	padding-top: 30px;
+	clear:both;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+div.fechaLogo {
+	width: 400px;
+	display: block;
+	float: left;
+}
+
+div.usuarios {
+	width: 550px;
+	display: block;
+	float: left;
+}
+
+div.secciones {
+	clear:both;
+}
+/* Reglas para la cabecera */
+ 
+img.logo{
+	width:100%;
+}
+
+
+p#fechaActual {
+	font-size: 75%;
+	color: gray;
+}
+
+/* Reglas del menú de secciones */
+
+ul.secciones {
+	padding-bottom: 25px;
+	padding-top: 8px;
+	margin: 0;
+	border-top: 2px solid gray;
+}
+
+ul.secciones > li, ul.redesSociales li {
+	float: left;
+	margin-right: 5px;
+}
+
+ul.secciones li a {
+	padding: 5px;
+	border-radius: 5px;
+}
+
+ul.subsecciones{
+	display: none;
+	position: absolute;
+	margin-top: 2px;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+ul.subsecciones li {
+	padding: 12px 16px;
+}
+
+li.seccion:hover ul.subsecciones {
+	display: block;
+} 
+
+/* Estilo caracteristico del primer boton del menu */
+ul.secciones li.inicio a {
+	background-color: #990000;
+}
+
+ul.secciones li.inicio a:active, a.iniciar_sesion:active {
+	background-color: #ff8300;
+}
+
+ul.secciones li.inicio a:hover, a.iniciar_sesion:hover {
+	background-color: #ee0000;
+}
+
+ul.secciones li.inicio a {
+	color: white;
+}
+
+/* Footer */
+
+ul.aspectos_legales {
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+ul.aspectos_legales li, ul.rrss li{
+	display:inline;
+	margin-right: 20px;
+}
+
+ul.rrss {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+img.icono_rrss {
+	width: 40px;
+}
+
+/* login */
+
+a.iniciar_sesion {
+	float: right;
+	display: block;
+	outline: 0;
+	background: #990000;
+	border: 0;
+	padding: 8px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.sesion_iniciada{
+	float: right;
+}
+.sesion_iniciada p {
+	text-align: right;
+	font-size: 14px;
+
+}
+
+.sesion_iniciada p span {
+	font-weight: bold;
+	
+}
+
+/* gestor de contenidos */
+/* Menu */
+.menuGestorContenidos {
+	width: 30%;
+    float: left;
+    margin-left: 2%;
+	padding-left: 10px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border: 1px solid gray;
+	margin-bottom: 20px;
+}
+
+.menuGestorContenidos h1 {
+	font-size: 120%;
+}
+
+.menuGestorContenidos ul li {
+	list-style-type: disc;
+	margin-left: 20px;
+}

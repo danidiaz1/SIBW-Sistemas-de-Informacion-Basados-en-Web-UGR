@@ -1,0 +1,303 @@
+
+/* Reglas del menú de Redes Sociales */
+
+ul.redesSociales {
+	margin-top: 10px;	
+}
+
+ul.redesSociales li {
+	margin-right:8px;
+}
+
+/* Imagenes */
+
+
+img.iconoRedSocial{
+	width:20px;
+}
+
+/* Reglas para la noticia */
+
+article {
+	width: 70%;
+	float: left;
+	margin-top: 10px;
+}
+
+p.seccion {
+	text-align: right;
+	font-weight: bold;
+	font-size: 120%;
+	color: #444;
+}
+
+p.autorFecha{
+	margin: 0;
+	font-size: 80%;
+	color: #444;
+	font-weight: bold;
+}
+
+span.fecha{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+p.entradilla {
+	margin-top: 30px;
+	font-size: 80%;
+}
+
+figure.fotoNoticia {
+	margin: 0;
+	margin-top: 30px;
+}
+
+img.fotoNoticia {
+	width: 100%;
+	border-radius: 10px;
+}
+
+figcaption.pieDeFoto {
+	margin: 0;
+	font-size: 75%;
+	color: #666;
+}
+
+div.cuerpo {
+	margin-top: 40px;
+}
+
+div.cuerpo p {
+	line-height: 150%;
+}
+/* Reglas para la caja info */
+
+div.info {
+	float: left;
+	margin-top: 30px;
+	margin-left: 40px;
+	width: 25%;
+}
+
+/* Publicidad */
+
+ul.publicidad {
+	
+	padding-left: 0;
+}
+
+img.etsiit {
+	width: 100%;
+}
+
+h1.marcador {
+	margin-bottom: 2px;
+	border: 1px solid #777;
+	font-size: 9px;
+	display:inline-block;
+}
+
+/* Noticias relacionadas */
+div.info ul {
+	margin-bottom: 40px;
+}
+
+ul.noticiasRelacionadas li {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+
+h1.titularRelacionado {
+	margin-top: 4px;
+	font-size: 14px;
+}
+
+ul.noticiasRelacionadas img{
+	margin-top: 5px;
+}
+
+ul.noticiasRelacionadas li {
+	margin-bottom: 35px;
+}
+
+
+/* Reglas para la caja de comentarios */
+
+.divComentarios {
+	display: none; 
+    position: absolute; 
+    z-index: 1; 
+    width: 320px;
+    overflow: auto;
+	background-color: white;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid gray;
+	margin-bottom: 20px;
+	top: 160px;
+	left: 61%;
+	border-radius: 6px;
+	-webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.comentario {
+	margin-bottom: 30px;
+	border-bottom: 1px solid gray;
+}
+
+.comentario h1 {
+	font-size: 16px;
+}
+
+.comentario h2 {
+	font-size: 15px;
+}
+
+.comentario p {
+	font-size: 13px;
+	overflow: auto;
+}
+
+/* El botón para cerrar */
+.cerrar {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formularioComentarios fieldset legend {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.formularioComentarios fieldset input {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.formularioComentarios fieldset textarea {
+	width: 100%;
+	height: 100px;
+}
+
+/* Videos */
+
+video {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+iframe {
+	width: 560px;
+	height: 315px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+/* Navegador de imagenes */
+/* Contenedor del navegador de imagenes */
+.contenedor_imagenes {
+	position: relative;
+}
+
+.diapositiva {
+    display: none;
+}
+
+/* Los indicadores de punto de la foto actual */
+.punto {
+	cursor: pointer;
+	height: 13px;
+	width: 13px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.activo, .punto:hover {
+	background-color: #717171;
+}
+
+div.puntos {
+	text-align:center;
+	margin-top: 10px;
+}
+
+/* Animación del "fading" */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+/* Botones de siguiente y anterior */
+.anterior, .siguiente {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+/* Colocar el botón de "siguiente" a la derecha */
+.siguiente {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* Con el ratón por encima, añadimos un color de fondo con un poco de transparencia */
+.anterior:hover, .siguiente:hover {
+	background-color: rgba(255,255,255,0.8);
+}
+
+/* gestor de contenidos */
+/* Menu */
+.menuGestorContenidos {
+	width: 25%;
+    float: left;
+    margin-top: 10px;
+}

@@ -1,0 +1,22 @@
+.contenido {
+	width: 590px;
+}
+
+.post h1 {
+	font-size: 130%;
+}
+
+.post img {
+	width: 80%;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.post button {
+	margin-right: 5px;
+	padding: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 10px;
+}

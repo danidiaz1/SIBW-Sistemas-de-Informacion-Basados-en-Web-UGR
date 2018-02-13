@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://localhost/SIBW/P4/gestor_publicidad.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						
+						<link rel="stylesheet" type="text/css" href="./gestor_publicidad_files/estilo_comun.css"><link rel="stylesheet" type="text/css" href="./gestor_publicidad_files/estilo_gestores.css">
+		<script type="text/javascript" src="./gestor_publicidad_files/gestor_publicidades.js.descarga"><link rel="shortcut icon" type="image/x-icon" href="resources/imagenes/icono.ico">
+						<script type="text/javascript" src="javascript/comentarios.js"></script>
+						<script type="text/javascript" src="./gestor_publicidad_files/date.js.descarga"></script>
+						<script src="./gestor_publicidad_files/jquery.min.js.descarga"></script>
+						<script type="text/javascript" src="./gestor_publicidad_files/login-box.js.descarga"></script>
+						<title>Gestor de publicidades</title> 
+					</head> 
+					
+					<body>
+						<div class="contenido">	<div class="cabecera">
+				<div class="fechaLogo">
+					<a href="http://localhost/SIBW/P4/index.php">
+						<img class="logo" alt="Daily News" title="Daily News" src="./gestor_publicidad_files/logo.png">
+					</a>
+					<p id="fechaActual">Martes, 13 de febrero de 2018</p>
+				</div>
+				<div class="usuarios"><div class="sesion_iniciada"><p>Identificado como <span>jefe</span>. </p>
+						<p><a href="http://localhost/SIBW/P4/logout.php"> Cerrar sesión. </a></p></div></div><div class="secciones">
+					<ul class="secciones">
+						<li class="inicio"> <a href="http://localhost/SIBW/P4/index.php">Inicio</a></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Arte</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Arte1</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia1																						</a></li><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia2								</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Cine</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Cine1						</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Libros</a>
+								<ul class="subsecciones"></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Tecnología</a>
+								<ul class="subsecciones"></ul></li></ul>
+				</div></div><div class="listado_publicidades">
+				<h1> Viendo los anuncios publicitarios.</h1><div class="botones">
+		<button id="boton_nueva_publicidad">Incluir nuevo anuncio</button>
+		<button type="submit" form="formGestionPublicidades" name="accion" value="eliminar">Eliminar</button>
+		</div><div class="nueva_publicidad">
+					<form id="miFormularioNuevaPublicidad" action="http://localhost/SIBW/P4/gestor_publicidad.php" enctype="multipart/form-data" name="miFormularioNuevaPublicidad" class="formularioNuevaPublicidad" method="post">
+						<fieldset>
+							<legend>Nuevo anuncio</legend>
+							<input type="text" name="titulo" placeholder="título" required="">
+							<span> Imagen: </span>
+							<input type="file" name="imagen" id="imagenPublicidad" required="">
+							<input type="text" name="texto" placeholder="texto" required="">
+							<input type="text" name="enlace" placeholder="enlace" required="">
+							<button type="submit" id="enviarPublicidad" name="accion" value="insertar" form="miFormularioNuevaPublicidad">Enviar</button>
+							<button class="ocultar">Ocultar</button>
+						</fieldset>
+					</form>
+					
+				</div>
+				<script type="text/javascript">mostrarNuevaPublicidad();</script>
+				
+				<ul>
+					<form name="miFormularioPublicidades" action="http://localhost/SIBW/P4/gestor_publicidad.php" id="formGestionPublicidades" method="post" enctype="multipart/form-data"><label><li id="publicidad2" class="publicidad">
+					<h1>
+						<input class="selector_publicidad" type="checkbox" name="ids_publicidad[]" value="2">																		etsiit																										<a class="enlace_stats" href="http://localhost/SIBW/P4/estadpubli.php?id=2">
+							<img class="imagen_stats" title="Ver estadísticas" src="./gestor_publicidad_files/stats.png">
+						</a>
+					</h1>
+					<a class="imagen_publi" href="https://www.google.es/">
+						<img class="img_publicidad" title="																		etsiit																										" src="./gestor_publicidad_files/etsiit.png">
+					</a>
+					<p class="texto_publicidad">Texto: <span class="span_texto">publi de la etsiit</span></p>
+					<p class="parrafo_publicidad">Enlace: <a class="enlace_publicidad" href="https://www.google.es/">https://www.google.es</a></p>
+					<p><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_publicidad.php#~o" onclick="mostrarEdicionPublicidad(&#39;publicidad2&#39;, 2);">
+						<img class="imagen_editar" src="./gestor_publicidad_files/editar.ico" title="Editar anuncio"></a></p>
+					<input type="hidden" name="imagenEliminar2" value="resources/banners/etsiit.png">
+				</li>
+			</label><label><li id="publicidad1" class="publicidad">
+					<h1>
+						<input class="selector_publicidad" type="checkbox" name="ids_publicidad[]" value="1">Hoteles<a class="enlace_stats" href="http://localhost/SIBW/P4/estadpubli.php?id=1">
+							<img class="imagen_stats" title="Ver estadísticas" src="./gestor_publicidad_files/stats.png">
+						</a>
+					</h1>
+					<a class="imagen_publi" href="https://www.google.com/">
+						<img class="img_publicidad" title="Hoteles" src="./gestor_publicidad_files/vertical.png">
+					</a>
+					<p class="texto_publicidad">Texto: <span class="span_texto">publi de hoteles</span></p>
+					<p class="parrafo_publicidad">Enlace: <a class="enlace_publicidad" href="https://www.google.com/">https://www.google.com</a></p>
+					<p><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_publicidad.php#~o" onclick="mostrarEdicionPublicidad(&#39;publicidad1&#39;, 1);">
+						<img class="imagen_editar" src="./gestor_publicidad_files/editar.ico" title="Editar anuncio"></a></p>
+					<input type="hidden" name="imagenEliminar1" value="resources/banners/vertical.png">
+				</li>
+			</label></form>
+				</ul>
+			</div><div class="menuGestorContenidos">
+				<h1> Menú de gestión de contenidos</h1>
+				<ul>
+					<li><a href="http://localhost/SIBW/P4/gestor_noticias.php">Noticias</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_comentarios.php">Comentarios</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_publicidad.php">Publicidad</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_secciones.php">Secciones y subsecciones</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_publicidad.php">Organizador de la página de inicio</a></li>
+				</ul>
+			</div><div class="footer"> 
+				<ul class="aspectos_legales">
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_publicidad.php#~o">Términos y condiciones de uso</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_publicidad.php#~o">Política de privacidad</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_publicidad.php#~o">Política de cookies</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_publicidad.php#~o">Contacto</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_publicidad.php#~o">Publicidad</a>
+					</li>
+				</ul>
+				
+				<ul class="rrss">
+				<p> Nuestras redes sociales</p>
+					<li>
+						<a href="http://localhost/SIBW/P4/facebook.html" target="_blank">
+							<img class="icono_rrss" alt="Facebook" title="Facebook" src="./gestor_publicidad_files/facebook_icon.png">
+						</a>
+					</li>
+					<li>
+						<a href="http://localhost/SIBW/P4/twitter.html" target="_blank">
+							<img class="icono_rrss" alt="Twitter" title="Twitter" src="./gestor_publicidad_files/twitter_icon.png">
+						</a>
+					</li>
+				</ul>
+			</div></div>
+			 
+		</body></html>

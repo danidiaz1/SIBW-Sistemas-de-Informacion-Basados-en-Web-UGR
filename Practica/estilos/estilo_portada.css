@@ -1,0 +1,181 @@
+/* Reglas para el noticiario1 */
+
+div.noticiario1 {
+	margin-top: 10px;
+	overflow: auto;
+	padding-bottom: 10px;
+}
+
+figure {
+	margin: 0;
+}
+
+div.noticiario1 p {
+	line-height: 150%;
+}
+
+div.noticiario1 article {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display:inline-block
+}
+
+div.principales {
+	width: 65%;
+	float: left;
+	margin-top: 10px;
+}
+
+/* Reglas para la columna de principales */
+
+.noticiario1 img, .noticiario2 img{
+	width: 100%;
+	border-radius: 5px;
+}
+
+/* Noticia principal */
+article#principal {
+	margin-top: 5px;
+	border-bottom: 1px solid gray;
+}
+
+article#principal figcaption {
+	margin-top: 10px;
+	font-size: 75%;
+	color: #666;
+}
+
+p.entradilla{
+	font-size: 90%;
+}
+
+article#principal h1{
+	margin-top: 25px;
+	margin-bottom: 15px;
+	font-size: 250%;
+}
+
+article#principal p.autorFecha{
+	margin: 0;
+	font-size: 80%;
+	color: #444;
+	font-weight: bold;
+}
+
+/* Resto de noticias principales */
+
+article.principales {
+	border-bottom: 1px solid gray;
+	padding-bottom: 15px;
+}
+
+article.principales h1{
+	margin: 0;
+	font-size: 175%;
+	float: left;
+	width: 55%;
+}
+
+article.principales figure {
+	float: left;
+	width: 40%;
+	margin-right: 25px;
+}
+
+article.principales h2.autorFecha{
+	margin-top: 20px;
+	float: left;
+	width: 55%;
+	font-size: 80%;
+}
+/* Reglas para la columna de secundarias */
+
+div.secundarias {
+	width: 32%;
+	float: left;
+	margin-left: 3%;
+}
+
+article.secundario{
+	border-bottom: 1px solid gray;
+	padding-bottom: 5px;
+}
+
+article.secundario figure {
+	margin-right: 0px;
+	margin-left: 10px;
+	width: 50%;
+	float: right;
+}
+
+article.secundario h1{
+	margin: 0;
+	font-size: 110%;
+}
+
+article.secundario h2.autorFecha{
+	margin-top: 20px;
+	font-size: 80%;
+}
+
+/* Reglas para el banner */
+
+ul.publicidad  li{
+	text-align: center;
+	display: inline-block;
+}
+
+img.hoteles {
+	width: 85%;
+	border-radius: 0;
+}
+
+/* Reglas para el noticiario2 */
+
+div.noticiario2 {
+	margin-top: 40px;
+	overflow: auto;
+}
+
+div.columna1, div.columna2, div.columna3 {
+	float: left;
+}
+
+div.columna1 article, div.columna2 article, div.columna3 article {
+	padding-bottom: 5px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 30px;
+}
+
+div.columna1 ul li:last-child article, div.columna2 ul li:last-child article, div.columna3 ul li:last-child article {
+	border-bottom: none;
+	margin-bottom: 5px;
+
+}
+
+div.columna1 h1, div.columna3 h1 {
+	font-size: 100%;
+}
+
+div.columna1 .autorFecha, div.columna2 .autorFecha, div.columna3 .autorFecha {
+	font-size: 80%;
+}
+
+
+div.columna2 h1 {
+	font-size: 150%;
+}
+
+div.columna1 {
+	width: 24%;
+}
+
+div.columna2 {
+	width: 42%;
+	margin-right: 45px;
+	margin-left: 45px;
+}
+
+div.columna3 {
+	width: 24%;
+}

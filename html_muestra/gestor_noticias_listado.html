@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						
+						<link rel="stylesheet" type="text/css" href="./gestor_noticias_listado_files/estilo_comun.css"><link rel="stylesheet" type="text/css" href="./gestor_noticias_listado_files/estilo_gestores.css">
+		<script type="text/javascript" src="./gestor_noticias_listado_files/gestor_noticias.js.descarga"></script>
+		<script type="text/javascript" src="./gestor_noticias_listado_files/ckeditor.js.descarga"></script><style>.cke{visibility:hidden;}</style><link rel="shortcut icon" type="image/x-icon" href="http://localhost/SIBW/P4/resources/imagenes/icono.ico">
+						<script type="text/javascript" src="./gestor_noticias_listado_files/comentarios.js.descarga"></script>
+						<script type="text/javascript" src="./gestor_noticias_listado_files/date.js.descarga"></script>
+						<script src="./gestor_noticias_listado_files/jquery.min.js.descarga"></script>
+						<script type="text/javascript" src="./gestor_noticias_listado_files/login-box.js.descarga"></script>
+						<title>Gestor de comentarios</title> 
+					<script type="text/javascript" src="./gestor_noticias_listado_files/config.js.descarga"></script><link rel="stylesheet" type="text/css" href="./gestor_noticias_listado_files/editor.css"><script type="text/javascript" src="./gestor_noticias_listado_files/es.js.descarga"></script><script type="text/javascript" src="./gestor_noticias_listado_files/styles.js.descarga"></script><script type="text/javascript" src="./gestor_noticias_listado_files/plugin.js.descarga"></script></head> 
+					
+					<body>
+						<div class="contenido">	<div class="cabecera">
+				<div class="fechaLogo">
+					<a href="http://localhost/SIBW/P4/index.php">
+						<img class="logo" alt="Daily News" title="Daily News" src="./gestor_noticias_listado_files/logo.png">
+					</a>
+					<p id="fechaActual">Martes, 13 de febrero de 2018</p>
+				</div>
+				<div class="usuarios"><div class="sesion_iniciada"><p>Identificado como <span>jefe</span>. </p>
+						<p><a href="http://localhost/SIBW/P4/logout.php"> Cerrar sesión. </a></p></div></div><div class="secciones">
+					<ul class="secciones">
+						<li class="inicio"> <a href="http://localhost/SIBW/P4/index.php">Inicio</a></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Arte</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Arte1</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia1																						</a></li><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia2								</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Cine</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Cine1						</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Libros</a>
+								<ul class="subsecciones"></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Tecnología</a>
+								<ul class="subsecciones"></ul></li></ul>
+				</div></div><div class="listado_noticias"><h1> Viendo las noticias de la sección: Ciencia.</h1><div class="botones">
+		<button id="boton_nueva_noticia">Incluir nueva noticia</button>
+		<button type="submit" form="formGestionNoticias" name="accion" value="eliminar">Eliminar</button>
+		<a href="http://localhost/SIBW/P4/gestor_noticias.php"><button>Volver</button></a>
+		</div><div class="nueva_noticia">
+					<form id="miFormularioNuevaNoticia" action="http://localhost/SIBW/P4/gestor_noticias.php" name="miFormularioNuevaNoticia" enctype="multipart/form-data" class="formularioNuevaNoticia" method="post">
+						<fieldset>
+							<legend>Nueva noticia</legend>
+							<input type="text" name="autor" placeholder="autor" required="">
+							<input type="text" name="titular" placeholder="titular" required="">
+							<input type="text" name="subtitulo" placeholder="subtitulo" required="">
+							<select name="id_seccion_nueva_noticia" required="">;
+								<option disabled="" selected="" value=""> Sección </option><option value="5">Arte</option><option value="1">Ciencia</option><option value="3">Cine</option><option value="4">Libros</option><option value="2">Tecnología</option></select>
+							<select name="id_subseccion_nueva_noticia">
+								<option disabled="" selected="" value=""> Subsección </option><option value="7">Arte1</option><option value="1">Ciencia1																						</option><option value="6">Ciencia2								</option><option value="3">Cine1						</option></select>
+							<input type="text" name="entradilla" placeholder="entradilla" required="">
+							<span> Imágenes: <span>
+							<input id="nuevas_imagenes" type="file" name="nuevas_imagenes[]" placeholder="imagen" multiple="" required="">
+							
+							<textarea name="pies_imagenes" placeholder="Pies de las imágenes. Si incluyes varias imágenes, debes escribir varios pies separándolos por dos punto y coma (primer pie;;segundo pie)"></textarea>
+							<span> Video: </span>
+							<input id="nuevo_video" type="file" name="video" placeholder="video">
+							<p>Cuerpo:</p>
+							<div class="editor">
+								<textarea id="editor" name="cuerpo" placeholder="cuerpo" style="visibility: hidden; display: none;"></textarea><div id="cke_editor" class="cke_1 cke cke_reset cke_chrome cke_editor_editor cke_ltr cke_browser_webkit" dir="ltr" lang="es" role="application" aria-labelledby="cke_editor_arialbl"><span id="cke_editor_arialbl" class="cke_voice_label">Editor de texto enriquecido, editor</span><div class="cke_inner cke_reset" role="presentation"><span id="cke_1_top" class="cke_top cke_reset_all" role="presentation" style="height: auto; user-select: none;"><span id="cke_6" class="cke_voice_label">Barras de herramientas del editor</span><span id="cke_1_toolbox" class="cke_toolbox" role="group" aria-labelledby="cke_6" onmousedown="return false;"><span id="cke_7" class="cke_toolbar" aria-labelledby="cke_7_label" role="toolbar"><span id="cke_7_label" class="cke_voice_label">Estilos básicos</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_8" class="cke_button cke_button__bold cke_button_off" href="javascript:void(&#39;Negrita&#39;)" title="Negrita (Ctrl+B)" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_8_label" aria-describedby="cke_8_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(0,event);" onfocus="return CKEDITOR.tools.callFunction(1,event);" onclick="CKEDITOR.tools.callFunction(2,this);return false;"><span class="cke_button_icon cke_button__bold_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -24px;background-size:auto;">&nbsp;</span><span id="cke_8_label" class="cke_button_label cke_button__bold_label" aria-hidden="false">Negrita</span><span id="cke_8_description" class="cke_button_label" aria-hidden="false">Keyboard shortcut Ctrl+B</span></a><a id="cke_9" class="cke_button cke_button__italic cke_button_off" href="javascript:void(&#39;Cursiva&#39;)" title="Cursiva (Ctrl+I)" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_9_label" aria-describedby="cke_9_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(3,event);" onfocus="return CKEDITOR.tools.callFunction(4,event);" onclick="CKEDITOR.tools.callFunction(5,this);return false;"><span class="cke_button_icon cke_button__italic_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -48px;background-size:auto;">&nbsp;</span><span id="cke_9_label" class="cke_button_label cke_button__italic_label" aria-hidden="false">Cursiva</span><span id="cke_9_description" class="cke_button_label" aria-hidden="false">Keyboard shortcut Ctrl+I</span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_10" class="cke_toolbar" aria-labelledby="cke_10_label" role="toolbar"><span id="cke_10_label" class="cke_voice_label">Párrafo</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_11" class="cke_button cke_button__numberedlist cke_button_off" href="javascript:void(&#39;Numeración&#39;)" title="Numeración" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_11_label" aria-describedby="cke_11_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(6,event);" onfocus="return CKEDITOR.tools.callFunction(7,event);" onclick="CKEDITOR.tools.callFunction(8,this);return false;"><span class="cke_button_icon cke_button__numberedlist_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -576px;background-size:auto;">&nbsp;</span><span id="cke_11_label" class="cke_button_label cke_button__numberedlist_label" aria-hidden="false">Numeración</span><span id="cke_11_description" class="cke_button_label" aria-hidden="false"></span></a><a id="cke_12" class="cke_button cke_button__bulletedlist cke_button_off" href="javascript:void(&#39;Viñetas&#39;)" title="Viñetas" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_12_label" aria-describedby="cke_12_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(9,event);" onfocus="return CKEDITOR.tools.callFunction(10,event);" onclick="CKEDITOR.tools.callFunction(11,this);return false;"><span class="cke_button_icon cke_button__bulletedlist_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -528px;background-size:auto;">&nbsp;</span><span id="cke_12_label" class="cke_button_label cke_button__bulletedlist_label" aria-hidden="false">Viñetas</span><span id="cke_12_description" class="cke_button_label" aria-hidden="false"></span></a><span class="cke_toolbar_separator" role="separator"></span><a id="cke_13" class="cke_button cke_button__outdent cke_button_disabled " href="javascript:void(&#39;Disminuir Sangría&#39;)" title="Disminuir Sangría" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_13_label" aria-describedby="cke_13_description" aria-haspopup="false" aria-disabled="true" onkeydown="return CKEDITOR.tools.callFunction(12,event);" onfocus="return CKEDITOR.tools.callFunction(13,event);" onclick="CKEDITOR.tools.callFunction(14,this);return false;"><span class="cke_button_icon cke_button__outdent_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -384px;background-size:auto;">&nbsp;</span><span id="cke_13_label" class="cke_button_label cke_button__outdent_label" aria-hidden="false">Disminuir Sangría</span><span id="cke_13_description" class="cke_button_label" aria-hidden="false"></span></a><a id="cke_14" class="cke_button cke_button__indent cke_button_off" href="javascript:void(&#39;Aumentar Sangría&#39;)" title="Aumentar Sangría" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_14_label" aria-describedby="cke_14_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(15,event);" onfocus="return CKEDITOR.tools.callFunction(16,event);" onclick="CKEDITOR.tools.callFunction(17,this);return false;"><span class="cke_button_icon cke_button__indent_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -336px;background-size:auto;">&nbsp;</span><span id="cke_14_label" class="cke_button_label cke_button__indent_label" aria-hidden="false">Aumentar Sangría</span><span id="cke_14_description" class="cke_button_label" aria-hidden="false"></span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_15" class="cke_toolbar" aria-labelledby="cke_15_label" role="toolbar"><span id="cke_15_label" class="cke_voice_label">Enlaces</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_16" class="cke_button cke_button__link cke_button_off" href="javascript:void(&#39;Insertar/Editar Vínculo&#39;)" title="Insertar/Editar Vínculo (Ctrl+L)" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_16_label" aria-describedby="cke_16_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(18,event);" onfocus="return CKEDITOR.tools.callFunction(19,event);" onclick="CKEDITOR.tools.callFunction(20,this);return false;"><span class="cke_button_icon cke_button__link_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -456px;background-size:auto;">&nbsp;</span><span id="cke_16_label" class="cke_button_label cke_button__link_label" aria-hidden="false">Insertar/Editar Vínculo</span><span id="cke_16_description" class="cke_button_label" aria-hidden="false">Keyboard shortcut Ctrl+L</span></a><a id="cke_17" class="cke_button cke_button__unlink cke_button_disabled " href="javascript:void(&#39;Eliminar Vínculo&#39;)" title="Eliminar Vínculo" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_17_label" aria-describedby="cke_17_description" aria-haspopup="false" aria-disabled="true" onkeydown="return CKEDITOR.tools.callFunction(21,event);" onfocus="return CKEDITOR.tools.callFunction(22,event);" onclick="CKEDITOR.tools.callFunction(23,this);return false;"><span class="cke_button_icon cke_button__unlink_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 -480px;background-size:auto;">&nbsp;</span><span id="cke_17_label" class="cke_button_label cke_button__unlink_label" aria-hidden="false">Eliminar Vínculo</span><span id="cke_17_description" class="cke_button_label" aria-hidden="false"></span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_18" class="cke_toolbar cke_toolbar_last" aria-labelledby="cke_18_label" role="toolbar"><span id="cke_18_label" class="cke_voice_label">about</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_19" class="cke_button cke_button__about cke_button_off" href="javascript:void(&#39;Acerca de CKEditor&#39;)" title="Acerca de CKEditor" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_19_label" aria-describedby="cke_19_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(24,event);" onfocus="return CKEDITOR.tools.callFunction(25,event);" onclick="CKEDITOR.tools.callFunction(26,this);return false;"><span class="cke_button_icon cke_button__about_icon" style="background-image:url(&#39;http://localhost/SIBW/P4/javascript/ckeditor/plugins/icons.png?t=H0CG&#39;);background-position:0 0px;background-size:auto;">&nbsp;</span><span id="cke_19_label" class="cke_button_label cke_button__about_label" aria-hidden="false">Acerca de CKEditor</span><span id="cke_19_description" class="cke_button_label" aria-hidden="false"></span></a></span><span class="cke_toolbar_end"></span></span></span></span><div id="cke_1_contents" class="cke_contents cke_reset" role="presentation" style="height: 200px;"><iframe src="./gestor_noticias_listado_files/saved_resource.html" frameborder="0" class="cke_wysiwyg_frame cke_reset" title="Editor de texto enriquecido, editor" tabindex="0" allowtransparency="true" style="width: 100%; height: 100%;"></iframe></div></div></div>
+							</div>
+							<button type="submit" id="enviarNoticia" name="accion" value="insertar" form="miFormularioNuevaNoticia">Enviar</button>
+							<button class="ocultar">Ocultar</button>
+						</span></span></fieldset>
+					</form>
+				</div>
+				<script type="text/javascript">mostrarNuevaNoticia();</script>
+				<script type="text/javascript">mostrarEditorHTML();</script><h1> Puedes seleccionar en el icono del lápiz para editar la noticia. </h1>
+					<ul><form name="miFormularioNoticias" action="http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1" id="formGestionNoticias" method="post">
+					<p> Cambiar el estado de la(s) noticia(s) a: 
+						<select id="select_cambiar_estado_noticia" name="nuevo_estado">
+							<option value="publicada" selected="">Publicada</option>
+							<option value="pendiente">Pendiente</option>
+						</select>
+						<button type="submit" form="formGestionNoticias" name="accion" value="cambiar_estado">Confirmar</button>
+					</p><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="11">
+					<input type="hidden" name="videoEliminar11" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=11" title="Una firma rusa planea vuelos turísticos alrededor de la Luna en cinco años"><img src="./gestor_noticias_listado_files/10483_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=11" title="Una firma rusa planea vuelos turísticos alrededor de la Luna en cinco años">Una firma rusa planea vuelos turísticos alrededor de la Luna en cinco años</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Daily News
+						</span> | <span class="fecha">28-02-2017, 
+						23:24:30</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=11">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="10">
+					<input type="hidden" name="videoEliminar10" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=10" title="Las siete hermanas de la Tierra"><img src="./gestor_noticias_listado_files/10482_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=10" title="Las siete hermanas de la Tierra">Las siete hermanas de la Tierra</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Nora Bar
+						</span> | <span class="fecha">10-03-2017, 
+						17:32:59</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=10">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="9">
+					<input type="hidden" name="videoEliminar9" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=9" title="Investigan si las bacterias aumentarían la producción de alimentos en Marte"><img src="./gestor_noticias_listado_files/10479_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=9" title="Investigan si las bacterias aumentarían la producción de alimentos en Marte">Investigan si las bacterias aumentarían la producción de alimentos en Marte</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Daily News
+						</span> | <span class="fecha">01-04-2017, 
+						15:24:11</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=9">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="8">
+					<input type="hidden" name="videoEliminar8" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=8" title="Hallados los fósiles más antiguos de la Tierra"><img src="./gestor_noticias_listado_files/10503_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=8" title="Hallados los fósiles más antiguos de la Tierra">Hallados los fósiles más antiguos de la Tierra</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Daily News
+						</span> | <span class="fecha">01-03-2017, 
+						08:00:00</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=8">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="7">
+					<input type="hidden" name="videoEliminar7" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=7" title="La cápsula Dragon llega a la Estación Espacial Internacional en su segundo intento"><img src="./gestor_noticias_listado_files/10480_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=7" title="La cápsula Dragon llega a la Estación Espacial Internacional en su segundo intento">La cápsula Dragon llega a la Estación Espacial Internacional en su segundo intento</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">COLPISA / AFP
+						</span> | <span class="fecha">15-03-2017, 
+						11:11:24</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=7">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="6">
+					<input type="hidden" name="videoEliminar6" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=6" title="La NASA sopesa enviar dos astronautas a la Luna en 2019 con la Orion."><img src="./gestor_noticias_listado_files/10481_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=6" title="La NASA sopesa enviar dos astronautas a la Luna en 2019 con la Orion.">La NASA sopesa enviar dos astronautas a la Luna en 2019 con la Orion.</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Daily News
+						</span> | <span class="fecha">12-04-2017, 
+						18:33:36</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=6">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="5">
+					<input type="hidden" name="videoEliminar5" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=5" title="Los dinosaurios evolucionaron hacia el vuelo sin pretenderlo."><img src="./gestor_noticias_listado_files/10478_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=5" title="Los dinosaurios evolucionaron hacia el vuelo sin pretenderlo.">Los dinosaurios evolucionaron hacia el vuelo sin pretenderlo.</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Daily News
+						</span> | <span class="fecha">27-02-2017, 
+						04:30:28</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=5">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="3">
+					<input type="hidden" name="videoEliminar3" value="">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=3" title="Antonio J. Durán: " la="" existencia="" de="" agua="" no="" garantiza="" vida""=""><img src="./gestor_noticias_listado_files/10476_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=3" title="Antonio J. Durán: " la="" existencia="" de="" agua="" no="" garantiza="" vida""="">Antonio J. Durán: "La existencia de agua no garantiza la vida"</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Javier López Rejas
+						</span> | <span class="fecha">23-02-2017, 
+						16:11:24</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=3">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="2">
+					<input type="hidden" name="videoEliminar2" value="https://www.youtube.com/embed/E2ZOJfXuU08">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=2" title="El mundo de The Big Bang Theory"><img src="./gestor_noticias_listado_files/39282_1.jpg"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=2" title="El mundo de The Big Bang Theory">El mundo de The Big Bang Theory</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Juanito
+						</span> | <span class="fecha">24-02-2017, 
+						02:39:07</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=2">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label><label><li>
+					<input class="selector_noticia" type="checkbox" name="ids_noticia[]" value="1">
+					<input type="hidden" name="videoEliminar1" value="resources/videos/test_video.mp4">
+					
+					<article>
+						<figure>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=1" title="Un sistema extrasolar esconde siete mundos donde buscar vida."><img src="./gestor_noticias_listado_files/trappist.png"></a>
+						</figure>
+						
+						<h1>
+							<a href="http://localhost/SIBW/P4/noticia.php?id=1" title="Un sistema extrasolar esconde siete mundos donde buscar vida.">Un sistema extrasolar esconde siete mundos donde buscar vida.</a><span class="estado_publicada">Publicada</span></h1>
+						
+						<h2 class="autorFecha"><span class="autor">Pepito
+						</span> | <span class="fecha">23-02-2017, 
+						10:36:30</span><a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_noticias.php?id_noticia=1">
+						<img class="imagen_editar" src="./gestor_noticias_listado_files/editar.ico" title="Editar noticia"></a></h2>
+						
+					</article>
+				</li></label></form></ul></div><div class="menuGestorContenidos">
+				<h1> Menú de gestión de contenidos</h1>
+				<ul>
+					<li><a href="http://localhost/SIBW/P4/gestor_noticias.php">Noticias</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_comentarios.php">Comentarios</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_publicidad.php">Publicidad</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_secciones.php">Secciones y subsecciones</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1">Organizador de la página de inicio</a></li>
+				</ul>
+			</div><div class="footer"> 
+				<ul class="aspectos_legales">
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1#~o">Términos y condiciones de uso</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1#~o">Política de privacidad</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1#~o">Política de cookies</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1#~o">Contacto</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_noticias.php?id_seccion=1#~o">Publicidad</a>
+					</li>
+				</ul>
+				
+				<ul class="rrss">
+				<p> Nuestras redes sociales</p>
+					<li>
+						<a href="http://localhost/SIBW/P4/facebook.html" target="_blank">
+							<img class="icono_rrss" alt="Facebook" title="Facebook" src="./gestor_noticias_listado_files/facebook_icon.png">
+						</a>
+					</li>
+					<li>
+						<a href="http://localhost/SIBW/P4/twitter.html" target="_blank">
+							<img class="icono_rrss" alt="Twitter" title="Twitter" src="./gestor_noticias_listado_files/twitter_icon.png">
+						</a>
+					</li>
+				</ul>
+			</div></div>
+			 
+		</body></html>
