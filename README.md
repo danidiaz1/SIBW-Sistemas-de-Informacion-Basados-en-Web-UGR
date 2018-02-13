@@ -34,7 +34,11 @@ El contenido (noticias, comentarios, portada) se carga dinámicamente desde una 
 - Inserción dinámica de comentarios.
 - Control de clicks sobre anuncios.
 
-## Imágenes de la web
+## Muestras de la web
+
+Se puede ver una muestra de algunos HTML generados por el sistema (sin funcionalidad) en la carpeta "html_muestra". A continuación se adjunta algunas imágenes de muestra:
+
+
 
 
 
