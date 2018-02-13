@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						
+						<link rel="stylesheet" type="text/css" href="./listado_comentarios_files/estilo_comun.css"><link rel="stylesheet" type="text/css" href="./listado_comentarios_files/estilo_gestores.css"><link rel="shortcut icon" type="image/x-icon" href="http://localhost/SIBW/P4/resources/imagenes/icono.ico">
+						<script type="text/javascript" src="./listado_comentarios_files/comentarios.js.descarga"></script>
+						<script type="text/javascript" src="./listado_comentarios_files/date.js.descarga"></script>
+						<script src="./listado_comentarios_files/jquery.min.js.descarga"></script>
+						<script type="text/javascript" src="./listado_comentarios_files/login-box.js.descarga"></script>
+						<title>Gestor de comentarios</title> 
+					</head> 
+					
+					<body>
+						<div class="contenido">	<div class="cabecera">
+				<div class="fechaLogo">
+					<a href="http://localhost/SIBW/P4/index.php">
+						<img class="logo" alt="Daily News" title="Daily News" src="./listado_comentarios_files/logo.png">
+					</a>
+					<p id="fechaActual">Martes, 13 de febrero de 2018</p>
+				</div>
+				<div class="usuarios"><div class="sesion_iniciada"><p>Identificado como <span>jefe</span>. </p>
+						<p><a href="http://localhost/SIBW/P4/logout.php"> Cerrar sesión. </a></p></div></div><div class="secciones">
+					<ul class="secciones">
+						<li class="inicio"> <a href="http://localhost/SIBW/P4/index.php">Inicio</a></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Arte</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Arte1</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia1																						</a></li><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Ciencia2								</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Cine</a>
+								<ul class="subsecciones"><li class="subseccion"> <a href="http://localhost/SIBW/P4/index.php">Cine1						</a></li></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Libros</a>
+								<ul class="subsecciones"></ul></li><li class="seccion"> <a href="http://localhost/SIBW/P4/index.php">Tecnología</a>
+								<ul class="subsecciones"></ul></li></ul>
+				</div></div><div class="listado_noticias"><h1> Viendo los comentarios de la noticia: </h1>
+						<article>
+							
+							<figure>
+								<a href="http://localhost/SIBW/P4/noticia.php?id=1" title="Un sistema extrasolar esconde siete mundos donde buscar vida."><img src="./listado_comentarios_files/trappist.png"></a>
+							</figure>
+							
+							<h1>
+								<a href="http://localhost/SIBW/P4/noticia.php?id=1" title="Un sistema extrasolar esconde siete mundos donde buscar vida.">Un sistema extrasolar esconde siete mundos donde buscar vida.</a>
+							</h1>
+							
+							<h2 class="autorFecha"><span class="autor">Pepito</span> | <span class="fecha">23-02-2017, 10:36:30</span></h2>
+						</article><div class="botones">
+		<button id="boton_nuevo_comentario">Incluir nuevo comentario</button>
+		<button type="submit" form="formGestionComentarios" name="accion" value="eliminar">Eliminar</button>
+		<a href="http://localhost/SIBW/P4/gestor_comentarios.php"><button>Volver</button></a>
+		</div><div class="nuevo_comentario">
+							<form id="miFormularioComentarios" action="http://localhost/SIBW/P4/gestor_comentarios.php" name="miFormularioComentarios" class="formularioComentarios" method="get">
+								<fieldset>
+									<legend>Nuevo comentario</legend>
+									<p>Fecha: <input class="inputfecha" name="fecha" type="date"> </p>
+									<p>Hora: <input class="inputhora" name="hora" type="time" step="1"></p>
+									<input type="text" name="nombreComentario" placeholder="nombre" required="">
+									<input type="email" name="emailComentario" placeholder="correo electrónico" required="">
+									<textarea name="textoComentario" placeholder="texto del comentario" required=""></textarea>
+									<input type="hidden" name="id_noticia" value="1">
+									<button type="submit" id="enviarComentario" name="accion" value="insertar" form="miFormularioComentarios">Enviar</button>
+									<button class="ocultar">Ocultar</button>
+								</fieldset>
+							</form>
+							
+						</div>
+						<script type="text/javascript">mostrarNuevoComentario();</script>
+						
+						<ul>
+							<form name="miFormularioNoticias" action="http://localhost/SIBW/P4/gestor_comentarios.php" id="formGestionComentarios" method="get">
+								<input type="hidden" name="id_noticia" value="1">	
+				
+				<label><li id="comentario110" class="comentario">
+					
+					<h1><input class="selector_comentario" type="checkbox" name="ids_comentario[]" value="110">
+						Autor: <span class="nombreComentario">prueba</span>
+						<a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o" onclick="mostrarEdicionComentario(&#39;comentario110&#39;, 110);">
+						<img class="imagen_editar" src="./listado_comentarios_files/editar.ico" title="Editar comentario"></a>
+					</h1>
+					<h1>Correo: <span class="emailComentario">prueba@hotmail.com</span></h1>
+					<h2>
+						Fecha: <span class="fechaComentario">12-05-2017</span> | 
+						Hora: <span class="horaComentario">05:25:56</span>
+					</h2>
+					<p class="textoComentario">dsaasd</p>
+
+				</li></label>	
+				
+				<label><li id="comentario108" class="comentario">
+					
+					<h1><input class="selector_comentario" type="checkbox" name="ids_comentario[]" value="108">
+						Autor: <span class="nombreComentario">prueba</span>
+						<a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o" onclick="mostrarEdicionComentario(&#39;comentario108&#39;, 108);">
+						<img class="imagen_editar" src="./listado_comentarios_files/editar.ico" title="Editar comentario"></a>
+					</h1>
+					<h1>Correo: <span class="emailComentario">prueba@hotmail.com</span></h1>
+					<h2>
+						Fecha: <span class="fechaComentario">12-05-2017</span> | 
+						Hora: <span class="horaComentario">05:22:44</span>
+					</h2>
+					<p class="textoComentario">d</p>
+
+				</li></label>	
+				
+				<label><li id="comentario107" class="comentario">
+					
+					<h1><input class="selector_comentario" type="checkbox" name="ids_comentario[]" value="107">
+						Autor: <span class="nombreComentario">prueba</span>
+						<a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o" onclick="mostrarEdicionComentario(&#39;comentario107&#39;, 107);">
+						<img class="imagen_editar" src="./listado_comentarios_files/editar.ico" title="Editar comentario"></a>
+					</h1>
+					<h1>Correo: <span class="emailComentario">prueba@hotmail.com</span></h1>
+					<h2>
+						Fecha: <span class="fechaComentario">12-05-2017</span> | 
+						Hora: <span class="horaComentario">05:22:21</span>
+					</h2>
+					<p class="textoComentario">fasd</p>
+
+				</li></label>	
+				
+				<label><li id="comentario87" class="comentario">
+					
+					<h1><input class="selector_comentario" type="checkbox" name="ids_comentario[]" value="87">
+						Autor: <span class="nombreComentario">prueba</span>
+						<a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o" onclick="mostrarEdicionComentario(&#39;comentario87&#39;, 87);">
+						<img class="imagen_editar" src="./listado_comentarios_files/editar.ico" title="Editar comentario"></a>
+					</h1>
+					<h1>Correo: <span class="emailComentario">prueba@hotmail.com</span></h1>
+					<h2>
+						Fecha: <span class="fechaComentario">12-05-2017</span> | 
+						Hora: <span class="horaComentario">04:43:19</span>
+					</h2>
+					<p class="textoComentario">asafsd</p>
+
+				</li></label>	
+				
+				<label><li id="comentario1" class="comentario">
+					
+					<h1><input class="selector_comentario" type="checkbox" name="ids_comentario[]" value="1">
+						Autor: <span class="nombreComentario">Juan Pérez</span>
+						<a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o" onclick="mostrarEdicionComentario(&#39;comentario1&#39;, 1);">
+						<img class="imagen_editar" src="./listado_comentarios_files/editar.ico" title="Editar comentario"></a>
+					</h1>
+					<h1>Correo: <span class="emailComentario">prueba@hotmail.com</span></h1>
+					<h2>
+						Fecha: <span class="fechaComentario">11-04-2017</span> | 
+						Hora: <span class="horaComentario">15:17:25</span>
+					</h2>
+					<p class="textoComentario">Comentario de prueba.</p>
+
+				</li></label>	
+				
+				<label><li id="comentario2" class="comentario">
+					
+					<h1><input class="selector_comentario" type="checkbox" name="ids_comentario[]" value="2">
+						Autor: <span class="nombreComentario">Antonio Heredia</span>
+						<a class="enlace_editar" href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o" onclick="mostrarEdicionComentario(&#39;comentario2&#39;, 2);">
+						<img class="imagen_editar" src="./listado_comentarios_files/editar.ico" title="Editar comentario"></a>
+					</h1>
+					<h1>Correo: <span class="emailComentario">antonio@gmail.com</span></h1>
+					<h2>
+						Fecha: <span class="fechaComentario">05-04-2017</span> | 
+						Hora: <span class="horaComentario">22:17:15</span>
+					</h2>
+					<p class="textoComentario">Comentario de prueba 2.</p>
+
+				</li></label>		</form>
+					</ul></div><div class="menuGestorContenidos">
+				<h1> Menú de gestión de contenidos</h1>
+				<ul>
+					<li><a href="http://localhost/SIBW/P4/gestor_noticias.php">Noticias</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_comentarios.php">Comentarios</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_publicidad.php">Publicidad</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_secciones.php">Secciones y subsecciones</a></li>
+					<li><a href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1">Organizador de la página de inicio</a></li>
+				</ul>
+			</div><div class="footer"> 
+				<ul class="aspectos_legales">
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o">Términos y condiciones de uso</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o">Política de privacidad</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o">Política de cookies</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o">Contacto</a>
+					</li>
+					<li>
+					<a href="http://localhost/SIBW/P4/gestor_comentarios.php?id_noticia=1#~o">Publicidad</a>
+					</li>
+				</ul>
+				
+				<ul class="rrss">
+				<p> Nuestras redes sociales</p>
+					<li>
+						<a href="http://localhost/SIBW/P4/facebook.html" target="_blank">
+							<img class="icono_rrss" alt="Facebook" title="Facebook" src="./listado_comentarios_files/facebook_icon.png">
+						</a>
+					</li>
+					<li>
+						<a href="http://localhost/SIBW/P4/twitter.html" target="_blank">
+							<img class="icono_rrss" alt="Twitter" title="Twitter" src="./listado_comentarios_files/twitter_icon.png">
+						</a>
+					</li>
+				</ul>
+			</div></div>
+			 
+		</body></html>
