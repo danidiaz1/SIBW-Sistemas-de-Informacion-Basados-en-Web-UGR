@@ -1,2 +1,2 @@
-html_muestra/**/*.html linguist-vendored
-html_muestra/**/*.css linguist-vendored
+html_muestra/**/**.html linguist-vendored
+html_muestra/**/**.css linguist-vendored
