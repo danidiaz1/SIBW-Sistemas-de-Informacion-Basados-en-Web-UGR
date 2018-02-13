@@ -1,2 +1,2 @@
-**.html linguist-ignored
-**.css linguist-ignored
+**.html linguist-detectable=false
+**.css linguist-detectable=false
